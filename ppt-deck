@@ -1,0 +1,159 @@
+You are working inside this project folder. The folder contains:
+1. A PowerPoint presentation file
+2. Two transcript files from people presenting this same deck
+
+Your task is to inspect the project files, identify the PowerPoint and the two transcript files, analyze them together, and generate a beautiful, easy-to-use web page where I can review and use the speaker script.
+
+Goal:
+Create a local web page that shows two versions:
+1. Full speaker script for each slide
+2. Talking points for each slide
+
+The output should be easy for me to read while preparing and possibly while presenting.
+
+Important:
+- Do not just summarize the slides.
+- Do not copy the transcripts word-for-word.
+- Use the transcripts to understand how the presenters explained the slides, what context they added, what examples they used, and how they transitioned between ideas.
+- Rewrite everything into a clean, natural script that I can confidently present myself.
+- The tone should be clear, confident, professional, and peer-level.
+- Avoid sounding robotic, overly formal, academic, or like I am reading documentation.
+- The script should sound like a knowledgeable consultant presenting to peers.
+- Assume I understand the topic, but I need help structuring my explanation smoothly.
+- Do not add unsupported claims that are not present in the slides or transcripts.
+- If the two transcripts explain the same slide differently, combine the strongest and most useful points.
+- If a slide has limited transcript coverage, rely on the slide content and keep the explanation simple.
+
+First, inspect the files:
+- Locate the PowerPoint file.
+- Locate both transcript files.
+- Extract the slide number, slide title, visible text, and any important visuals, diagrams, screenshots, icons, tables, or flowcharts.
+- Read both transcripts carefully.
+- Match transcript content to the most relevant slides.
+- Preserve the original slide order.
+
+Then generate a web page.
+
+Create these files in the project folder:
+
+1. presentation-script.html
+2. presentation-script.css
+3. presentation-script.js
+
+The page should be static and should run locally by opening presentation-script.html in a browser. Do not require a backend.
+
+Web page requirements:
+
+# Layout
+
+Create a polished dashboard-style page with:
+
+- A clean header with the presentation title
+- A short presentation overview section
+- A left sidebar with slide navigation
+- Main content area showing slide-by-slide script
+- Tabs or toggle buttons for:
+  - Full Script
+    - Talking Points
+    - A search bar to search across slides
+    - A “Print / Save as PDF” button
+    - A “Copy script” button for each slide
+    - A “Copy talking points” button for each slide
+
+    # Presentation Overview Section
+
+    Include:
+    - Main theme of the presentation
+    - Intended audience
+    - Suggested speaking tone
+    - Estimated presentation style
+    - Overall narrative arc
+
+    # Slide Content Format
+
+    For each slide, show:
+
+    ## Slide X: [Slide Title]
+
+    Include:
+    - Slide purpose
+    - Full speaker script
+    - Talking points
+    - Transition cue to next slide, if helpful
+
+    # Full Script Requirements
+
+    For each slide, write a polished script I can say out loud.
+
+    The script should:
+    - Start naturally, not with “This slide shows…”
+    - Explain the slide clearly
+    - Include useful context from the transcripts
+    - Mention important visuals, diagrams, screenshots, or sections on the slide
+    - Include examples where helpful
+    - Use smooth transitions from the previous slide
+    - End with a natural transition into the next slide
+
+    Script length guidance:
+    - Intro / agenda slides: short
+    - Conceptual slides: medium
+    - Technical or process slides: more detailed
+    - Summary / closing slides: concise and strong
+
+    # Talking Points Requirements
+
+    For each slide, provide:
+    - One sentence key message
+    - 4–7 concise bullets I can glance at while presenting
+    - Useful examples or phrasing from the transcripts
+    - Transition cues where helpful
+
+    # Visual Design Requirements
+
+    Make the page look modern, calm, and professional.
+
+    Use:
+    - Clean typography
+    - Soft background
+    - Card-based slide sections
+    - Clear spacing
+    - Sticky left slide navigation
+    - Highlighted key message box
+    - Distinct styling for full script and talking points
+    - Smooth scrolling
+    - Responsive layout for desktop and tablet
+
+    Avoid:
+    - Overly colorful design
+    - Dense walls of text
+    - Tiny fonts
+    - Cluttered UI
+    - Framework dependencies unless the project already uses one
+
+    # JavaScript Behavior
+
+    Implement:
+    - Tab switching between Full Script and Talking Points
+    - Search/filter slides
+    - Copy-to-clipboard buttons
+    - Print button using window.print()
+    - Active slide highlight in the sidebar while scrolling, if practical
+
+    # Final Output
+
+    Create the web page files directly in the project folder.
+
+    Also create a backup Markdown file named:
+
+    presentation-speaker-script.md
+
+    The Markdown should contain the same content in this structure:
+
+    1. Presentation Overview
+    2. Version 1: Full Script for Each Slide
+    3. Version 2: Talking Points for Each Slide
+    4. Final Presentation Tips
+
+    Quality bar:
+    - The final web page should feel like a
+    
