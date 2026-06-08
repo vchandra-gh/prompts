@@ -54,106 +54,110 @@ Create a polished dashboard-style page with:
 - Main content area showing slide-by-slide script
 - Tabs or toggle buttons for:
   - Full Script
-    - Talking Points
-    - A search bar to search across slides
-    - A “Print / Save as PDF” button
-    - A “Copy script” button for each slide
-    - A “Copy talking points” button for each slide
+  - Talking Points
+- A search bar to search across slides
+- A “Print / Save as PDF” button
+- A “Copy script” button for each slide
+- A “Copy talking points” button for each slide
 
-    # Presentation Overview Section
+# Presentation Overview Section
 
-    Include:
-    - Main theme of the presentation
-    - Intended audience
-    - Suggested speaking tone
-    - Estimated presentation style
-    - Overall narrative arc
+Include:
+- Main theme of the presentation
+- Intended audience
+- Suggested speaking tone
+- Estimated presentation style
+- Overall narrative arc
 
-    # Slide Content Format
+# Slide Content Format
 
-    For each slide, show:
+For each slide, show:
 
-    ## Slide X: [Slide Title]
+## Slide X: [Slide Title]
 
-    Include:
-    - Slide purpose
-    - Full speaker script
-    - Talking points
-    - Transition cue to next slide, if helpful
+Include:
+- Slide purpose
+- Full speaker script
+- Talking points
+- Transition cue to next slide, if helpful
 
-    # Full Script Requirements
+# Full Script Requirements
 
-    For each slide, write a polished script I can say out loud.
+For each slide, write a polished script I can say out loud.
 
-    The script should:
-    - Start naturally, not with “This slide shows…”
-    - Explain the slide clearly
-    - Include useful context from the transcripts
-    - Mention important visuals, diagrams, screenshots, or sections on the slide
-    - Include examples where helpful
-    - Use smooth transitions from the previous slide
-    - End with a natural transition into the next slide
+The script should:
+- Start naturally, not with “This slide shows…”
+- Explain the slide clearly
+- Include useful context from the transcripts
+- Mention important visuals, diagrams, screenshots, or sections on the slide
+- Include examples where helpful
+- Use smooth transitions from the previous slide
+- End with a natural transition into the next slide
 
-    Script length guidance:
-    - Intro / agenda slides: short
-    - Conceptual slides: medium
-    - Technical or process slides: more detailed
-    - Summary / closing slides: concise and strong
+Script length guidance:
+- Intro / agenda slides: short
+- Conceptual slides: medium
+- Technical or process slides: more detailed
+- Summary / closing slides: concise and strong
 
-    # Talking Points Requirements
+# Talking Points Requirements
 
-    For each slide, provide:
-    - One sentence key message
-    - 4–7 concise bullets I can glance at while presenting
-    - Useful examples or phrasing from the transcripts
-    - Transition cues where helpful
+For each slide, provide:
+- One sentence key message
+- 4–7 concise bullets I can glance at while presenting
+- Useful examples or phrasing from the transcripts
+- Transition cues where helpful
 
-    # Visual Design Requirements
+# Visual Design Requirements
 
-    Make the page look modern, calm, and professional.
+Make the page look modern, calm, and professional.
 
-    Use:
-    - Clean typography
-    - Soft background
-    - Card-based slide sections
-    - Clear spacing
-    - Sticky left slide navigation
-    - Highlighted key message box
-    - Distinct styling for full script and talking points
-    - Smooth scrolling
-    - Responsive layout for desktop and tablet
+Use:
+- Clean typography
+- Soft background
+- Card-based slide sections
+- Clear spacing
+- Sticky left slide navigation
+- Highlighted key message box
+- Distinct styling for full script and talking points
+- Smooth scrolling
+- Responsive layout for desktop and tablet
 
-    Avoid:
-    - Overly colorful design
-    - Dense walls of text
-    - Tiny fonts
-    - Cluttered UI
-    - Framework dependencies unless the project already uses one
+Avoid:
+- Overly colorful design
+- Dense walls of text
+- Tiny fonts
+- Cluttered UI
+- Framework dependencies unless the project already uses one
 
-    # JavaScript Behavior
+# JavaScript Behavior
 
-    Implement:
-    - Tab switching between Full Script and Talking Points
-    - Search/filter slides
-    - Copy-to-clipboard buttons
-    - Print button using window.print()
-    - Active slide highlight in the sidebar while scrolling, if practical
+Implement:
+- Tab switching between Full Script and Talking Points
+- Search/filter slides
+- Copy-to-clipboard buttons
+- Print button using window.print()
+- Active slide highlight in the sidebar while scrolling, if practical
 
-    # Final Output
+# Final Output
 
-    Create the web page files directly in the project folder.
+Create the web page files directly in the project folder.
 
-    Also create a backup Markdown file named:
+Also create a backup Markdown file named:
 
-    presentation-speaker-script.md
+presentation-speaker-script.md
 
-    The Markdown should contain the same content in this structure:
+The Markdown should contain the same content in this structure:
 
-    1. Presentation Overview
-    2. Version 1: Full Script for Each Slide
-    3. Version 2: Talking Points for Each Slide
-    4. Final Presentation Tips
+1. Presentation Overview
+2. Version 1: Full Script for Each Slide
+3. Version 2: Talking Points for Each Slide
+4. Final Presentation Tips
 
-    Quality bar:
-    - The final web page should feel like a
-    
+Quality bar:
+- The final web page should feel like a polished prep tool, not a raw document.
+- The script should feel natural and usable in a real presentation.
+- The talking points should be glanceable.
+- The web page should make it easy for me to move slide by slide while preparing.
+
+Use the files in the current workspace. Do not ask me to paste the PPT or transcripts unless you cannot access them. Generate the web page files directly in this folder.
