@@ -1,0 +1,243 @@
+You are acting as a senior Solution Architect, AI Engineer, and Power Platform/Azure architect.
+
+Context:
+I recently joined a project for a bookkeeping/invoice automation pilot. The broader business problem is to reduce manual bookkeeping work. The current pilot appears focused on invoice/bill intake, extraction, validation, draft transaction package generation, human review/exception handling, auditability, and possible future Agilink integration.
+
+Relevant project context:
+
+- The client uses Agilink as the accounting/bookkeeping system of record.
+- The goal is not necessarily full autonomous processing in Phase 1.
+- The safer Phase 1 pattern is likely: invoice/bill intake → AI extraction → validation/rules/vendor matching → draft package → human review/exception queue → reporting/audit.
+- Agilink writeback/import/API should not be assumed unless confirmed.
+- We are evaluating architecture options across Power Platform, Azure, Azure AI Document Intelligence, Azure OpenAI/AI Foundry, Dataverse, Blob Storage, Power Apps, Power Automate, and possible custom connectors.
+- I want to contribute to an internal team discussion about solution design and architecture.
+
+I am providing you with a demo recording and transcript. Please analyze them deeply and prepare me for a technical/team discussion.
+
+Important rules:
+
+1. Do not hallucinate. Only say something was shown if it is clearly visible in the recording or stated in the transcript.
+2. Separate “Observed in demo,” “Inferred,” and “Needs confirmation.”
+3. If something is uncertain, mark it as uncertain.
+4. When possible, reference approximate timestamps or transcript excerpts.
+5. Focus on what matters for solution design, AI design, Power Platform/Azure architecture, data model, integrations, security, and pilot scope.
+6. Do not just summarize the meeting. Extract implementation-relevant details.
+
+Please produce the following output:
+
+1. Executive Summary
+
+Give me a short summary of what the demo showed and why it matters for the automation project.
+
+2. Demo Walkthrough
+
+Explain the demo step-by-step in plain English:
+
+- What process was demonstrated?
+- Which users/roles were involved?
+- What systems/screens were shown?
+- What data was entered, reviewed, approved, or submitted?
+- What happens before and after each step?
+- Where does Agilink fit into the process?
+
+3. Current-State Process Map
+
+Convert the demo into a clear current-state workflow:
+Step 1 → Step 2 → Step 3, etc.
+
+For each step, include:
+
+- Actor/user
+- System used
+- Input data
+- Output/result
+- Manual effort
+- Pain points or risks
+
+4. Data Captured From the Demo
+
+Create a table of all fields/entities shown or mentioned.
+
+Include:
+
+- Field/entity name
+- Example value if visible
+- Source system/screen
+- Whether it appears required or optional
+- Whether it could be extracted by AI, derived by rules, entered by user, or pulled from Agilink/reference data
+- Confidence/uncertainty
+
+Focus especially on:
+
+- vendor
+- invoice number
+- invoice date
+- due date
+- amount
+- tax
+- GL code/account/category
+- client/entity/household/account
+- payment method
+- description/memo
+- attachments
+- approval/review status
+- duplicate indicators
+- exception reasons
+
+5. Automation Opportunities
+
+Identify automation opportunities shown by the demo.
+
+Group them into:
+
+- Good Phase 1 candidates
+- Better Phase 2 candidates
+- Risky/avoid for now
+
+For each opportunity, explain:
+
+- Business value
+- Technical complexity
+- Dependency/risk
+- Recommended approach
+
+6. AI Design Implications
+
+Based on the demo, explain what AI should and should not do.
+
+Cover:
+
+- Should Azure Document Intelligence be used for primary invoice extraction?
+- Where could Azure OpenAI/AI Foundry help?
+- Where should deterministic rules be used instead of AI?
+- What confidence thresholds may be needed?
+- What exception categories should exist?
+- What human review points are required?
+- What data should be captured for evaluation and feedback?
+
+7. Power Platform / Azure Architecture Implications
+
+Based on the demo, recommend a solution architecture.
+
+Discuss:
+
+- Power Apps vs custom UI/React/Code Apps for intake and review
+- Dataverse vs Azure SQL for workflow state and business data
+- Azure Blob Storage vs Dataverse file columns for document storage
+- Power Automate vs Azure Functions/Logic Apps for orchestration
+- Service Bus/queues for async processing and retry
+- Azure Document Intelligence for extraction
+- Azure OpenAI/AI Foundry for normalization/validation/explanation
+- Power BI/reporting needs
+- Application Insights/Log Analytics for telemetry
+- Key Vault/Managed Identity/security considerations
+
+Provide a recommended target architecture and explain why.
+
+8. Agilink Integration Analysis
+
+From the demo, identify what we learned about Agilink.
+
+Please answer:
+
+- Was any API/import/export/writeback capability shown or mentioned?
+- Does the demo suggest manual entry, import file, API writeback, or RPA/UI automation?
+- What data would need to be passed into Agilink?
+- What validation would be required before sending anything to Agilink?
+- What are the key questions we need to ask before committing to Agilink integration?
+
+Also provide a safe recommendation for Phase 1:
+
+- draft package only
+- import/API if confirmed
+- RPA only as last resort
+
+9. Requirements Extracted From the Demo
+
+Create a requirements backlog.
+
+Group into:
+
+- Functional requirements
+- Non-functional requirements
+- Security/compliance requirements
+- AI/evaluation requirements
+- Integration requirements
+- Reporting/audit requirements
+
+Use clear requirement wording like:
+“The system shall…”
+
+10. Data Model Suggestions
+
+Based on the demo, propose the main Dataverse or database tables/entities.
+
+Include:
+
+- Invoice Intake
+- Document Artifact
+- Extracted Field
+- Draft Transaction
+- Vendor Match Result
+- Exception
+- Human Review/Edit
+- Audit Event
+- Rule/Threshold Configuration
+- AI Evaluation Result
+
+For each table, list key fields and purpose.
+
+11. Risks, Gaps, and Open Questions
+
+List the biggest project risks and unknowns revealed by the demo.
+
+Group them by:
+
+- Scope risk
+- AI accuracy risk
+- Data quality risk
+- Agilink integration risk
+- Security/compliance risk
+- User adoption risk
+- Timeline/delivery risk
+
+For each, include a suggested mitigation.
+
+12. Questions I Should Ask the Team
+
+Prepare a prioritized list of questions I can ask in the team discussion.
+
+Make them sound informed and useful, not basic.
+
+Include questions around:
+
+- what is already decided vs open
+- AI extraction approach
+- validation/confidence model
+- Power Apps/Dataverse architecture
+- Agilink integration assumptions
+- human review process
+- sample invoices and evaluation dataset
+- success metrics
+- pilot scope boundaries
+
+13. My Contribution Talking Points
+
+Give me 8–10 strong talking points I can use in the meeting.
+
+They should help me sound prepared as an AI engineer contributing to solution architecture.
+
+Tone:
+Professional, practical, not overly critical.
+
+14. Final Meeting Brief
+
+End with a concise 1-page meeting prep brief I can read 5 minutes before the discussion.
+
+It should include:
+
+- my understanding of the demo
+- key architecture implications
+- top risks
+- top questions
+- recommended position
